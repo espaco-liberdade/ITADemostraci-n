@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 7 (Demostración) - Pasaporte Italiano</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            line-height: 1.7;
+        }
+        .header-gradient {
+            background: linear-gradient(90deg, #008C45 0%, #F4F5F0 50%, #CD212A 100%);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            border: 1px solid #e5e7eb;
+            padding: 12px;
+            text-align: left;
+            vertical-align: middle;
+        }
+        th {
+            background-color: #008C45;
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.05em;
+        }
+        tr:nth-child(even) {
+            background-color: #f9fafb;
+        }
+        .ipa {
+            font-family: monospace;
+            color: #3498db;
+            font-weight: bold;
+        }
+        .pronuncia-guia {
+            font-style: italic;
+            color: #666;
+            font-size: 0.85em;
+            display: block;
+        }
+        .audio-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2em;
+            color: #3498db;
+            transition: transform 0.2s;
+            padding: 2px;
+            display: inline-flex;
+            align-items: center;
+        }
+        .audio-btn:hover {
+            transform: scale(1.2);
+        }
+        .nota-gramatical, .bloco-cultural {
+            background: #fdfbeA;
+            border-left: 5px solid #008C45;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .nota-dica {
+            background: #fff0f1;
+            border-left: 5px solid #CD212A;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .gabarito-oculto {
+            background-color: #b21b22;
+            color: #b21b22;
+            border-radius: 4px;
+            padding: 2px 6px;
+            font-weight: bold;
+            transition: all 0.3s;
+            cursor: pointer;
+            user-select: none;
+        }
+        .gabarito-oculto:hover {
+            background-color: #fff0f1;
+            color: #b21b22;
+        }
+        .traduccion-pequena {
+            font-size: 0.8em;
+            color: #666;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <!-- BANNER DE COMPRA (TOP) -->
+    <div class="max-w-6xl mx-auto mb-8 bg-yellow-50 border-l-4 border-yellow-500 p-4 md:p-6 rounded-r-lg shadow-sm flex flex-col md:flex-row items-center justify-between">
+        <div class="mb-4 md:mb-0">
+            <h3 class="text-lg md:text-xl font-bold text-yellow-800">🎁 ¡Bienvenido/a a tu clase de demostración gratuita!</h3>
+            <p class="text-sm md:text-base text-yellow-700 mt-1">Estás viendo 1 de las 50 clases inmersivas. Si te gusta este método, asegura tu acceso vitalicio al curso completo.</p>
+        </div>
+        <a href="https://pay.hotmart.com/H104825113O?checkoutMode=10" target="_blank" class="shrink-0 bg-[#CD212A] text-white px-6 py-3 rounded-full font-bold shadow-md hover:bg-[#a01820] transition-all transform hover:scale-105 text-center">
+            👉 ¡Comprar el Curso Completo!
+        </a>
+    </div>
+
+    <!-- TÍTULO PRINCIPAL -->
+    <header class="max-w-6xl mx-auto mb-10 text-center">
+        <div class="header-gradient p-1 rounded-lg shadow-lg">
+            <div class="bg-white p-6 rounded-md">
+                <div class="inline-block bg-yellow-100 text-yellow-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 border border-yellow-300">Clase de Muestra</div>
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-800 uppercase tracking-tight">
+                    📘 Clase 7: La Rutina Matutina 🇮🇹<br>
+                    <span class="text-2xl text-gray-500 font-normal">(La Routine Mattutina)</span>
+                </h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto space-y-12">
+        
+        <!-- 1. INTRODUCCIÓN -->
+        <section class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-100">
+            <h2 class="text-2xl font-bold text-[#005a2c] border-b-2 border-[#CD212A] pb-2 mb-6">1. Introducción</h2>
+            <div class="space-y-4 text-gray-700 leading-relaxed text-justify">
+                <p><em>¡Buongiorno! <span class="traduccion-pequena">(¡Buenos días!)</span></em> Bienvenido/a a la séptima clase. Hoy vamos a explorar un ambiente esencial para nuestro día a día: el baño (<em>il bagno</em>) y nuestra rutina de higiene personal.</p>
+                <p>Hablar sobre las acciones que hacemos con nosotros mismos — como "yo me levanto", "tú te vistes", "nosotros nos lavamos" — es fundamental. Para ello, aprenderemos a usar los <strong>verbos reflexivos</strong>, una categoría de verbos extremadamente común en italiano. Dominarlos es un paso gigante para describir tu cotidiano con naturalidad. <em>Allora, sei pronto/a per iniziare la giornata con noi? <span class="traduccion-pequena">(Entonces, ¿estás listo/a para empezar el día con nosotros?)</span></em></p>
+            </div>
+        </section>
+
+        <!-- 2. VOCABULARIO CLAVE -->
+        <section class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-100">
+            <h2 class="text-2xl font-bold text-[#005a2c] border-b-2 border-[#CD212A] pb-2 mb-6 text-center md:text-left">2. Vocabulario clave: El Baño y la Higiene</h2>
+            <div class="overflow-x-auto">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Italiano + Audio</th>
+                            <th>Traducción / Pronunciación</th>
+                            <th>Italiano + Audio</th>
+                            <th>Traducción / Pronunciación</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><div class="flex items-center justify-between font-bold">Il bagno <button class="audio-btn" onclick="playAudio('Il bagno')">🔊</button></div></td>
+                            <td>El baño<br><span class="ipa">/il ˈbaɲ.ɲo/</span><br><span class="pronuncia-guia">(Il BÁ-nho)</span></td>
+                            <td><div class="flex items-center justify-between font-bold">Il sapone <button class="audio-btn" onclick="playAudio('Il sapone')">🔊</button></div></td>
+                            <td>El jabón<br><span class="ipa">/il saˈpo.ne/</span><br><span class="pronuncia-guia">(Il sa-PÔ-ne)</span></td>
+                        </tr>
+                        <tr>
+                            <td><div class="flex items-center justify-between font-bold">La doccia <button class="audio-btn" onclick="playAudio('La doccia')">🔊</button></div></td>
+                            <td>La ducha<br><span class="ipa">/la ˈdot.tʃa/</span><br><span class="pronuncia-guia">(La DÓT-tcha)</span></td>
+                            <td><div class="flex items-center justify-between font-bold">Lo shampoo <button class="audio-btn" onclick="playAudio('Lo shampoo')">🔊</button></div></td>
+                            <td>El champú<br><span class="ipa">/lo ʃamˈpo/</span><br><span class="pronuncia-guia">(Lo shám-po)</span></td>
+                        </tr>
+                        <tr>
+                            <td><div class="flex items-center justify-between font-bold">Il lavandino <button class="audio-btn" onclick="playAudio('Il lavandino')">🔊</button></div></td>
+                            <td>El lavabo / La pila<br><span class="ipa">/il la.vanˈdi.no/</span><br><span class="pronuncia-guia">(Il la-van-DÍ-no)</span></td>
+                            <td><div class="flex items-center justify-between font-bold">Il dentifricio <button class="audio-btn" onclick="playAudio('Il dentifricio')">🔊</button></div></td>
+                            <td>La pasta de dientes<br><span class="ipa">/il den.tiˈfri.tʃo/</span><br><span class="pronuncia-guia">(Il den-ti-FRÍ-tcho)</span></td>
+                        </tr>
+                        <tr>
+                            <td><div class="flex items-center justify-between font-bold">Lo specchio <button class="audio-btn" onclick="playAudio('Lo specchio')">🔊</button></div></td>
+                            <td>El espejo<br><span class="ipa">/lo ˈspɛk.kjo/</span><br><span class="pronuncia-guia">(Lo SPÉK-kio)</span></td>
+                            <td><div class="flex items-center justify-between font-bold">Lo spazzolino <button class="audio-btn" onclick="playAudio('Lo spazzolino')">🔊</button></div></td>
+                            <td>El cepillo de dientes<br><span class="ipa">/lo spat.tsoˈli.no/</span><br><span class="pronuncia-guia">(Lo spa-tso-LÍ-no)</span></td>
+                        </tr>
+                        <tr>
+                            <td><div class="flex items-center justify-between font-bold">L'asciugamano <button class="audio-btn" onclick="playAudio('Lasciugamano')">🔊</button></div></td>
+                            <td>La toalla<br><span class="ipa">/la.ʃu.ɡaˈma.no/</span><br><span class="pronuncia-guia">(La-shu-ga-MÁ-no)</span></td>
+                            <td><div class="flex items-center justify-between font-bold">Il pettine <button class="audio-btn" onclick="playAudio('Il pettine')">🔊</button></div></td>
+                            <td>El peine<br><span class="ipa">/il ˈpɛt.ti.ne/</span><br><span class="pronuncia-guia">(Il PÉT-ti-ne)</span></td>
+                        </tr>
+                        <tr>
+                            <td><div class="flex items-center justify-between font-bold">La vasca da bagno <button class="audio-btn" onclick="playAudio('La vasca da bagno')">🔊</button></div></td>
+                            <td>La bañera<br><span class="ipa">/la ˈva.ska da ˈbaɲ.ɲo/</span><br><span class="pronuncia-guia">(La VÁS-ca da BÁ-nho)</span></td>
+                            <td><div class="flex items-center justify-between font-bold">La spazzola <button class="audio-btn" onclick="playAudio('La spazzola')">🔊</button></div></td>
+                            <td>El cepillo (de pelo)<br><span class="ipa">/la ˈspat.tso.la/</span><br><span class="pronuncia-guia">(La SPÁT-tso-la)</span></td>
+                        </tr>
+                        <tr>
+                            <td><div class="flex items-center justify-between font-bold">Il water <button class="audio-btn" onclick="playAudio('Il water')">🔊</button></div></td>
+                            <td>El inodoro / wáter<br><span class="ipa">/il ˈva.ter/</span><br><span class="pronuncia-guia">(Il VÁ-ter)</span></td>
+                            <td><div class="flex items-center justify-between font-bold">Il profumo <button class="audio-btn" onclick="playAudio('Il profumo')">🔊</button></div></td>
+                            <td>El perfume<br><span class="ipa">/il proˈfu.mo/</span><br><span class="pronuncia-guia">(Il pro-FÚ-mo)</span></td>
+                        </tr>
+                        <tr>
+                            <td><div class="flex items-center justify-between font-bold">La carta igienica <button class="audio-btn" onclick="playAudio('La carta igienica')">🔊</button></div></td>
+                            <td>El papel higiénico<br><span class="ipa">/la ˈkar.ta iˈdʒɛ.ni.ka/</span><br><span class="pronuncia-guia">(La CÁR-ta i-DJÊ-ni-ca)</span></td>
+                            <td><div class="flex items-center justify-between font-bold">Il trucco <button class="audio-btn" onclick="playAudio('Il trucco')">🔊</button></div></td>
+                            <td>El maquillaje<br><span class="ipa">/il ˈtruk.ko/</span><br><span class="pronuncia-guia">(Il TRÚK-ko)</span></td>
+                        </tr>
+                        <tr>
+                            <td><div class="flex items-center justify-between font-bold">Il rubinetto <button class="audio-btn" onclick="playAudio('Il rubinetto')">🔊</button></div></td>
+                            <td>El grifo / La canilla<br><span class="ipa">/il ru.biˈnet.to/</span><br><span class="pronuncia-guia">(Il ru-bi-NÉT-to)</span></td>
+                            <td><div class="flex items-center justify-between font-bold">La barba <button class="audio-btn" onclick="playAudio('La barba')">🔊</button></div></td>
+                            <td>La barba<br><span class="ipa">/la ˈbar.ba/</span><br><span class="pronuncia-guia">(La BÁR-ba)</span></td>
+                        </tr>
+                        <tr>
+                            <td><div class="flex items-center justify-between font-bold">Il bidet <button class="audio-btn" onclick="playAudio('Il bidet')">🔊</button></div></td>
+                            <td>El bidé<br><span class="ipa">/il biˈdɛ/</span><br><span class="pronuncia-guia">(Il bi-DÉ)</span></td>
+                            <td><div class="flex items-center justify-between font-bold">I capelli <button class="audio-btn" onclick="playAudio('I capelli')">🔊</button></div></td>
+                            <td>El cabello / pelo<br><span class="ipa">/i kaˈpel.li/</span><br><span class="pronuncia-guia">(I ca-PÉL-li)</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 3. GRAMÁTICA ESENCIAL -->
+        <section class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-100">
+            <h2 class="text-2xl font-bold text-[#005a2c] border-b-2 border-[#CD212A] pb-2 mb-6 uppercase">3. Gramática Esencial</h2>
+            
+            <div class="nota-gramatical">
+                <h4 class="font-bold text-lg mb-4 text-[#005a2c]">💡 Los Verbos Reflexivos (I Verbi Riflessivi)</h4>
+                <p class="mb-4">Un verbo es reflexivo cuando la acción que realiza el sujeto recae sobre el propio sujeto. En español, decimos "Yo <strong>me</strong> lavo", "Él <strong>se</strong> viste". En italiano, la lógica es la misma. Reconocemos un verbo reflexivo en infinitivo porque termina en <strong>-si</strong> (ej: <em>lavar<strong>si</strong>, svegliar<strong>si</strong>, vestir<strong>si</strong></em>).</p>
+                <p class="mb-4">Para conjugarlos, quitamos el <strong>-si</strong>, conjugamos el verbo normalmente según su terminación (-are, -ere, -ire) y colocamos la partícula reflexiva correspondiente <strong>antes</strong> del verbo.</p>
+                
+                <h5 class="font-bold mb-2">Las Partículas Reflexivas</h5>
+                <div class="overflow-x-auto mb-6">
+                    <table class="text-sm">
+                        <thead><tr><th>Sujeto</th><th>Partícula + Audio</th><th>Traducción</th></tr></thead>
+                        <tbody>
+                            <tr><td>Io</td><td><strong>mi</strong> <button class="audio-btn" onclick="playAudio('mi')">🔊</button></td><td>me</td></tr>
+                            <tr><td>Tu</td><td><strong>ti</strong> <button class="audio-btn" onclick="playAudio('ti')">🔊</button></td><td>te</td></tr>
+                            <tr><td>Lui / Lei</td><td><strong>si</strong> <button class="audio-btn" onclick="playAudio('si')">🔊</button></td><td>se</td></tr>
+                            <tr><td>Noi</td><td><strong>ci</strong> <button class="audio-btn" onclick="playAudio('ci')">🔊</button></td><td>nos</td></tr>
+                            <tr><td>Voi</td><td><strong>vi</strong> <button class="audio-btn" onclick="playAudio('vi')">🔊</button></td><td>os / se (ustedes)</td></tr>
+                            <tr><td>Loro</td><td><strong>si</strong> <button class="audio-btn" onclick="playAudio('si')">🔊</button></td><td>se</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h5 class="font-bold mb-2">Ejemplo: Conjugación del verbo LAVARSI (Lavarse)</h5>
+                <div class="overflow-x-auto">
+                    <table class="text-sm">
+                        <thead><tr><th>Persona</th><th>Frase Ejemplo + Audio</th><th>Traducción</th></tr></thead>
+                        <tbody id="conjugation-table">
+                            <script>
+                                const conj = [
+                                    ["Io", "Io mi lavo", "Yo me lavo"],
+                                    ["Tu", "Tu ti lavi", "Tú te lavas"],
+                                    ["Lui/Lei", "Lui si lava", "Él/Ella se lava"],
+                                    ["Noi", "Noi ci laviamo", "Nosotros nos lavamos"],
+                                    ["Voi", "Voi vi lavate", "Vosotros os laváis / Uds. se lavan"],
+                                    ["Loro", "Loro si lavano", "Ellos se lavan"]
+                                ];
+                                const cBody = document.getElementById('conjugation-table');
+                                conj.forEach(c => {
+                                    cBody.innerHTML += `<tr><td>${c[0]}</td><td class="font-bold"><div class="flex justify-between items-center">${c[1]} <button class="audio-btn" onclick="playAudio('${c[1]}')">🔊</button></div></td><td>${c[2]}</td></tr>`;
+                                });
+                            </script>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. FRASES ESENCIALES (3 COLUMNAS - 50 FRASES) -->
+        <section class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-100">
+            <h2 class="text-2xl font-bold text-[#005a2c] border-b-2 border-[#CD212A] pb-2 mb-6 uppercase">4. Frases Esenciales para el Día a Día</h2>
+            <div class="overflow-x-auto">
+                <table class="text-sm">
+                    <thead>
+                        <tr>
+                            <th>ITALIANO + ÁUDIO</th>
+                            <th>TRANSCRIÇÃO IPA + SIMPLIFICADA</th>
+                            <th>TRADUCCIÓN</th>
+                        </tr>
+                    </thead>
+                    <tbody id="phrases-container">
+                        <script>
+                            const aula7Phrases = [
+                                ["Io mi sveglio presto la mattina.", "/ˈi.o mi ˈzveʎ.ʎo ˈprɛ.sto la matˈti.na/", "(Í-o mi ZVÉ-lho PRÉS-to la mat-TÍ-na)", "Me despierto temprano por la mañana."],
+                                ["A che ora ti svegli?", "/a ke ˈo.ra ti ˈzveʎ.ʎi/", "(A ke Ô-ra ti ZVÉ-lhi?)", "¿A qué hora te despiertas?"],
+                                ["Lui si alza subito dal letto.", "/ˈlu.i si ˈal.tsa ˈsu.bi.to dal ˈlɛt.to/", "(LÚ-i si ÁL-tsa SÚ-bi-to dal LÉT-to)", "Él se levanta enseguida de la cama."],
+                                ["Lei si lava la faccia con il sapone.", "/ˈlɛi si ˈla.va la ˈfat.tʃa kon il saˈpo.ne/", "(Léi si LÁ-va la FÁ-tcha con il sa-PÔ-ne)", "Ella se lava la cara con jabón."],
+                                ["Noi ci facciamo la doccia ogni giorno.", "/ˈnoi tʃi fatˈtʃa.mo la ˈdot.tʃa ˈoɲ.ɲi ˈdʒor.no/", "(NÓI tchi fa-TCHÁ-mo la DÓT-tcha Ô-nhi DJÓR-no)", "Nos duchamos todos los días."],
+                                ["Voi vi vestite elegantemente.", "/ˈvoi vi veˈsti.te e.le.ɡan.teˈmen.te/", "(VÓI vi ves-TÍ-te e-le-gan-te-MÊN-te)", "Vosotros os vestís elegantemente."],
+                                ["Loro si preparano per uscire.", "/ˈlo.ro si preˈpa.ra.no per uʃˈʃi.re/", "(LÔ-ro si pre-PÁ-ra-no per u-SHÍ-re)", "Ellos se preparan para salir."],
+                                ["Mi lavo i denti con lo spazzolino.", "/mi ˈla.vo i ˈdɛn.ti kon lo spat.tsoˈli.no/", "(Mi LÁ-vo i DÊN-ti con lo spa-tso-LÍ-no)", "Me lavo los dientes con el cepillo."],
+                                ["Ti pettini i capelli?", "/ti ˈpɛt.ti.ni i kaˈpel.li/", "(Ti PÉT-ti-ni i ca-PÉL-li?)", "¿Te peinas el cabello?"],
+                                ["Lui si fa la barba ogni mattina.", "/ˈlu.i si fa la ˈbar.ba ˈoɲ.ɲi matˈti.na/", "(LÚ-i si fa la BÁR-ba Ô-nhi mat-TÍ-na)", "Él se afeita cada mañana."],
+                                ["Lei si trucca davanti allo specchio.", "/ˈlɛi si ˈtruk.ka daˈvan.ti al.lo ˈspɛk.kjo/", "(Léi si TRÚK-ka da-VÁN-ti ál-lo SPÉK-kio)", "Ella se maquilla frente al espejo."],
+                                ["Ci mettiamo il profumo.", "/tʃi metˈtja.mo il proˈfu.mo/", "(Tchi met-TIÁ-mo il pro-FÚ-mo)", "Nos ponemos perfume."],
+                                ["Vi asciugate con l'asciugamano.", "/vi aʃ.ʃuˈɡa.te kon la.ʃu.ɡaˈma.no/", "(Vi a-shu-GÁ-te con la-shu-ga-MÁ-no)", "Os secáis con la toalla."],
+                                ["Loro si rilassano nella vasca da bagno.", "/ˈlo.ro si riˈlas.sa.no ˈnel.la ˈva.ska da ˈbaɲ.ɲo/", "(LÔ-ro si ri-LÁS-sa-no NÉL-la VÁS-ca da BÁ-nho)", "Ellos se relajan en la bañera."],
+                                ["Il mio bagno è piccolo ma pulito.", "/il ˈmi.o ˈbaɲ.ɲo ɛ ˈpik.ko.lo ma puˈli.to/", "(Il MÍ-o BÁ-nho é PÍC-co-lo ma pu-LÍ-to)", "Mi baño es pequeño pero limpio."],
+                                ["Dov'è la carta igienica?", "/doˈvɛ la ˈkar.ta iˈdʒɛ.ni.ka/", "(Do-VÉ la CÁR-ta i-DJÊ-ni-ca?)", "¿Dónde está el papel higiénico?"],
+                                ["Il dentifricio è quasi finito.", "/il den.tiˈfri.tʃo ɛ ˈkwa.zi fiˈni.to/", "(Il den-ti-FRÍ-tcho é CUÁ-zi fi-NÍ-to)", "La pasta de dientes está casi acabada."],
+                                ["Non mi piace fare la doccia fredda.", "/non mi ˈpja.tʃe ˈfa.re la ˈdot.tʃa ˈfred.da/", "(Non mi PIÁ-tche FÁ-re la DÓT-tcha FRÉD-da)", "No me gusta ducharme con agua fría."],
+                                ["Ti sei ricordato di comprare il sapone?", "/ti ˈsɛi ri.korˈda.to di komˈpra.re il saˈpo.ne/", "(Ti séi ri-cor-DÁ-to di com-PRÁ-re il sa-PÔ-ne?)", "¿Te has acordado de comprar el jabón?"],
+                                ["Ogni quanto ti tagli i capelli?", "/ˈoɲ.ɲi ˈkwan.to ti ˈtaʎ.ʎi i kaˈpel.li/", "(Ô-nhi QUÁN-to ti TÁ-lhi i ca-PÉL-li?)", "¿Cada cuánto te cortas el pelo?"],
+                                ["Mi sento stanco stamattina.", "/mi ˈsɛn.to ˈstaŋ.ko sta.matˈti.na/", "(Mi SÊN-to STÁN-co sta-mat-TÍ-na)", "Me siento cansado esta mañana."],
+                                ["Come ti senti oggi?", "/ˈko.me ti ˈsɛn.ti ˈɔd.dʒi/", "(CÔ-me ti SÊN-ti Ó-dji?)", "¿Cómo te sientes hoy?"],
+                                ["Non si ricorda il mio nome.", "/non si riˈkɔr.da il ˈmi.o ˈno.me/", "(Non si ri-CÓR-da il MÍ-o NÔ-me)", "No recuerda mi nombre."],
+                                ["Ci vediamo più tardi.", "/tʃi veˈdja.mo ˈpju ˈtar.di/", "(Tchi ve-DIÁ-mo piú TÁR-di)", "Nos vemos más tarde."],
+                                ["Vi divertite alla festa?", "/vi di.verˈti.te ˈal.la ˈfɛ.sta/", "(Vi di-ver-TÍ-te ÁL-la FÉS-ta?)", "¿Os divertís en la fiesta?"],
+                                ["Si chiamano Marco e Giulia.", "/si ˈkja.ma.no ˈmar.ko e ˈdʒu.lja/", "(Si QUIÁ-ma-no MÁR-co e DJÚ-lia)", "Se llaman Marco y Giulia."],
+                                ["L'acqua dal rubinetto è fredda.", "/ˈlak.kwa dal ru.biˈnet.to ɛ ˈfred.da/", "(LÁK-qua dal ru-bi-NÉT-to é FRÉD-da)", "El agua del grifo está fría."],
+                                ["Uso la spazzola per i capelli.", "/ˈu.zo la ˈspat.tso.la per i kaˈpel.li/", "(Ú-zo la SPÁT-tso-la per i ca-PÉL-li)", "Uso el cepillo para el cabello."],
+                                ["Mi metto il pigiama per dormire.", "/mi ˈmet.to il piˈdʒa.ma per dorˈmi.re/", "(Mi MÉT-to il pi-DJÁ-ma per dor-MÍ-re)", "Me pongo el pijama para dormir."],
+                                ["Di solito mi addormento tardi.", "/di ˈsɔ.li.to mi ad.dorˈmen.to ˈtar.di/", "(Di SÓ-li-to mi ad-dor-MÊN-to TÁR-di)", "Normalmente me duermo tarde."],
+                                ["Mia sorella si lamenta sempre.", "/ˈmi.a soˈɾɛl.la si laˈmen.ta ˈsɛm.pre/", "(MÍ-a so-RÉL-la si la-MÊN-ta SÊM-pre)", "Mi hermana se queja siempre."],
+                                ["Dobbiamo sbrigarci!", "/dobˈbja.mo zbriˈɡar.tʃi/", "(Dob-BIÁ-mo zbri-GÁR-tchi!)", "¡Debemos darnos prisa!"],
+                                ["Vi siete dimenticati le chiavi.", "/vi ˈsjɛ.te di.men.tiˈka.ti le ˈkja.vi/", "(Vi SIÉ-te di-men-ti-CÁ-ti le QUIÁ-vi)", "Os habéis olvidado las llaves."],
+                                ["Mi piace guardarmi allo specchio.", "/mi ˈpja.tʃe ɡwarˈdar.mi al.lo ˈspɛk.kjo/", "(Mi PIÁ-tche guar-DÁR-mi ál-lo SPÉK-kio)", "Me gusta mirarme en el espejo."],
+                                ["Non ti preoccupare.", "/non ti pre.ok.kuˈpa.re/", "(Non ti pre-ok-ku-PÁ-re)", "No te preocupes."],
+                                ["Si arrabbia facilmente.", "/si arˈrab.bja fa.tʃilˈmen.te/", "(Si ar-RÁB-bia fa-tchil-MÊN-te)", "Se enfada fácilmente."],
+                                ["Ci annoiamo a casa.", "/tʃi an.noˈja.mo a ˈka.za/", "(Tchi an-noi-Á-mo a KÁ-za)", "Nos aburrimos en casa."],
+                                ["L'asciugamano è bagnato.", "/la.ʃu.ɡaˈma.no ɛ baɲˈɲa.to/", "(La-shu-ga-MÁ-no é ba-NHÁ-to)", "La toalla está mojada."],
+                                ["Voglio comprarmi un profumo nuovo.", "/ˈvɔʎ.ʎo komˈprar.mi un proˈfu.mo ˈnwɔ.vo/", "(VÓ-lho com-PRÁR-mi un pro-FÚ-mo NUÔ-vo)", "Quiero comprarme un perfume nuevo."],
+                                ["Dopo la doccia, mi metto la crema.", "/ˈdɔ.po la ˈdot.tʃa mi ˈmet.to la ˈkrɛ.ma/", "(DÔ-po la DÓT-tcha, mi MÉT-to la CRÉ-ma)", "Después de la ducha, me pongo crema."],
+                                ["Ti sei lavato le mani?", "/ti ˈsɛi laˈva.to le ˈma.ni/", "(Ti séi la-VÁ-to le MÁ-ni?)", "¿Te has lavado las manos?"],
+                                ["Si è addormentato sul divano.", "/si ɛ ad.dor.menˈta.to sul diˈva.no/", "(Si é ad-dor-men-TÁ-to sul di-VÁ-no)", "Se ha dormido en el sofá."],
+                                ["Ci siamo persi in città.", "/tʃi ˈsja.mo ˈpɛr.si in tʃitˈta/", "(Tchi SIÁ-mo PÉR-si in tchi-TÁ)", "Nos hemos perdido en la ciudad."],
+                                ["La mattina mi piace rilassarmi.", "/la matˈti.na mi ˈpja.tʃe ri.lasˈsar.mi/", "(La mat-TÍ-na mi PIÁ-tche ri-las-SÁR-mi)", "Por la mañana me gusta relajarme."],
+                                ["Non devi vergognarti.", "/non ˈde.vi ver.ɡoɲˈɲar.ti/", "(Non DÊ-vi ver-go-NHÁR-ti)", "No debes avergonzarte."],
+                                ["Bisogna lavarsi i denti dopo i pasti.", "/biˈzoɲ.ɲa laˈvar.si i ˈdɛn.ti ˈdɔ.po i ˈpa.sti/", "(Bi-ZÔ-nha la-VÁR-si i DÊN-ti DÔ-po i PÁS-ti)", "Hay que lavarse los dientes después de comer."],
+                                ["Quando ti sei sposato?", "/ˈkwan.do ti ˈsɛi spoˈza.to/", "(QUÁN-do ti séi spo-ZÁ-to?)", "¿Cuándo te has casado?"],
+                                ["Si sono lasciati il mese scorso.", "/si ˈso.no laʃˈʃa.ti il ˈme.ze ˈskor.so/", "(Si SÔ-no la-SHÁ-ti il MÊ-ze SCÓR-so)", "Se separaron el mes pasado."],
+                                ["Mi sono laureato in legge.", "/mi ˈso.no lau.reˈa.to in ˈlɛd.dʒe/", "(Mi SÔ-no lau-re-Á-to in LÉ-dje)", "Me he graduado en derecho."],
+                                ["Ci siamo conosciuti all'università.", "/tʃi ˈsja.mo ko.noʃˈʃu.ti al.lu.ni.ver.siˈta/", "(Tchi SIÁ-mo co-no-SHÚ-ti ál-lu-ni-ver-si-TÁ)", "Nos conocimos en la universidad."]
+                            ];
+
+                            const phraseTbody = document.getElementById('phrases-container');
+                            aula7Phrases.forEach((p, i) => {
+                                const row = document.createElement('tr');
+                                row.innerHTML = `
+                                    <td class="font-medium">
+                                        <div class="flex items-center gap-2">
+                                            <span>${i+1}. ${p[0]}</span>
+                                            <button class="audio-btn" onclick="playAudio('${p[0]}')">🔊</button>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="ipa">${p[1]}</span>
+                                        <span class="pronuncia-guia">${p[2]}</span>
+                                    </td>
+                                    <td class="text-gray-600 text-sm">${p[3]}</td>
+                                `;
+                                phraseTbody.appendChild(row);
+                            });
+                        </script>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 5. TEXTO PARA ANÁLISIS -->
+        <section class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-100">
+            <h2 class="text-2xl font-bold text-[#005a2c] border-b-2 border-[#CD212A] pb-2 mb-6 text-center md:text-left">5. Texto para Análisis: Il Bagno Italiano</h2>
+            <div class="space-y-4 text-gray-700 leading-relaxed text-justify text-sm">
+                <p><strong>Lectura en Italiano:</strong></p>
+                <p class="bg-gray-50 p-4 rounded-lg italic border-l-4 border-[#008C45]">
+                    Quando un straniero entra per la prima volta in un bagno italiano, specialmente in una casa, nota quasi sempre un elemento curioso: il bidet. Questo sanitario, che si trova accanto al water, è un elemento assolutamente standard e indispensabile per l'igiene personale degli italiani. L'idea di non usarlo dopo essere andati in bagno è considerata poco igienica. Mentre in molte culture si usa principalmente la carta igienica, in Italia si completa la pulizia con acqua e sapone grazie al bidet. Questa abitudine è così radicata che gli italiani all'estero spesso si lamentano della sua assenza negli hotel e nelle case. Oltre al bidet, il bagno italiano è generalmente funzionale. Spesso non è molto grande, ma è sempre completo. La doccia è più comune della vasca da bagno nelle case moderne. Capire l'importanza del bidet è un piccolo ma significativo passo per comprendere le abitudini quotidiane e il concetto di pulizia nella cultura italiana.
+                </p>
+                <div class="mt-6">
+                    <p class="font-bold">Pregunta: ¿Qué objeto se considera indispensable en un baño italiano, según el texto?</p>
+                    <ol class="list-[upper-alpha] list-inside mt-2 space-y-1">
+                        <li>Una bañera muy grande (la vasca da bagno).</li>
+                        <li>El bidé (il bidet).</li>
+                        <li>Dos duchas (due docce).</li>
+                    </ol>
+                    <p class="mt-4"><strong>Respuesta:</strong> <span class="gabarito-oculto">Respuesta correcta: B</span></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. EJERCICIOS DE FIJACIÓN -->
+        <section class="bg-[#f4f9ff] p-6 md:p-8 rounded-xl border border-[#d1e3ff]">
+            <h2 class="text-2xl font-bold text-[#005a2c] mb-6 flex items-center uppercase">📝 6. Ejercicios de Fijación</h2>
+            <ol class="space-y-6">
+                <li>1. Completa con la partícula reflexiva correcta: "Io ____ sveglio alle sette." -> <span class="gabarito-oculto">mi</span></li>
+                <li>2. Conjuga el verbo entre paréntesis: "Noi (prepararsi) per la cena." -> <span class="gabarito-oculto">ci prepariamo</span></li>
+                <li>3. Completa con la partícula reflexiva correcta: "Come ____ chiami?" -> <span class="gabarito-oculto">ti</span></li>
+                <li>4. Traduce al italiano: "Ellos se visten." -> <span class="gabarito-oculto">Loro si vestono.</span></li>
+                <li>5. Conjuga el verbo entre paréntesis: "I bambini (divertirsi) al parco." -> <span class="gabarito-oculto">si divertono</span></li>
+                <li>6. Completa con la partícula reflexiva correcta: "Voi ____ lavate le mani prima di mangiare?" -> <span class="gabarito-oculto">vi</span></li>
+                <li>7. Traduce al italiano: "Ella no se maquilla." -> <span class="gabarito-oculto">Lei non si trucca.</span></li>
+                <li>8. Conjuga el verbo entre paréntesis: "Tu (sentirsi) bene oggi?" -> <span class="gabarito-oculto">ti senti</span></li>
+                <li>9. Completa con la partícula reflexiva correcta: "Marco ____ fa la barba." -> <span class="gabarito-oculto">si</span></li>
+                <li>10. Traduce al italiano: "Nos vemos mañana." -> <span class="gabarito-oculto">Ci vediamo domani.</span></li>
+            </ol>
+        </section>
+
+        <!-- 7. SISTEMA DE AUDIO -->
+        <section class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-100">
+            <h2 class="text-2xl font-bold text-[#005a2c] border-b-2 border-[#CD212A] pb-2 mb-6 uppercase">7. Sistema de Audio y Práctica</h2>
+            <p class="text-gray-700">Utiliza los botones de audio 🔊 en cada sección para escuchar la pronunciación nativa. Recuerda que la repetición activa es fundamental. <em>¡Ascolta e ripeti! <span class="traduccion-pequena">(¡Escucha y repite!)</span></em></p>
+        </section>
+
+        <!-- 8. PRONUNCIACIÓN -->
+        <section class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-100">
+            <h2 class="text-2xl font-bold text-[#005a2c] border-b-2 border-[#CD212A] pb-2 mb-6 uppercase">8. Pronunciación: Los Dos Sonidos de la Letra Z (Zeta)</h2>
+            <div class="nota-dica">
+                <p>La letra 'Z' en italiano tiene dos sonidos principales, y la diferencia es sutil. La mejor forma de aprender es con la práctica y la escucha.</p>
+                <ul class="space-y-3 mt-4 text-sm">
+                    <li><strong>Z Suave o Sonora (sonido de /dz/):</strong> Es como un "dz" vibrante. Piensa en el zumbido de una abeja.
+                        <ul class="list-disc list-inside ml-4 mt-1">
+                            <li>Ej: <strong>Z</strong>aino (DZÁ-i-no - mochila), A<strong>z</strong>urro (A-DZÚR-ro - azul), Me<strong>z</strong>o (MÉ-dzo - medio).</li>
+                        </ul>
+                    </li>
+                    <li><strong>Z Fuerte o Sorda (sonido de /ts/):</strong> Es como la "ts" en "pizza". Es un sonido más seco y rápido.
+                        <ul class="list-disc list-inside ml-4 mt-1">
+                            <li>Ej: Can<strong>z</strong>one (Can-TSÓ-ne - canción), Sta<strong>z</strong>ione (Sta-TSIÓ-ne - estación), Gra<strong>z</strong>ie (GRÁ-tsie - gracias).</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p class="mt-4 text-sm font-semibold">¡No te preocupes si no aciertas siempre al principio. Con el tiempo, tu oído se acostumbrará a la diferencia!</p>
+            </div>
+        </section>
+
+        <!-- 9. EXPRESIONES CULTURALES -->
+        <section class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-100">
+            <h2 class="text-2xl font-bold text-[#005a2c] border-b-2 border-[#CD212A] pb-2 mb-6 uppercase">9. Expresiones Culturales: La Indispensable Presencia del Bidé</h2>
+            <div class="bloco-cultural text-justify text-sm">
+                <p>Como vimos en el texto, el bidé (<em>il bidet</em>) es omnipresente en Italia. Para los italianos, no es un lujo, sino una necesidad absoluta para la higiene diaria. La ausencia de un bidé en baños de otros países es una fuente constante de asombro e incluso de incomodidad para ellos. Una ley italiana de 1975 hizo obligatoria la instalación de un bidé en toda casa nueva. Esto demuestra cuán profundamente arraigada está esta práctica en la cultura local. Por lo tanto, si vas a vivir en Italia o quedarte en casa de italianos, familiarízate con el uso del bidé: es un símbolo del estándar italiano de limpieza y bienestar.</p>
+            </div>
+        </section>
+
+        <!-- 10. RESUMEN -->
+        <section class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-100">
+            <h2 class="text-2xl font-bold text-[#005a2c] border-b-2 border-[#CD212A] pb-2 mb-6 uppercase">10. Resumen de la Clase 📑</h2>
+            <ul class="list-disc list-inside space-y-2 text-gray-700 text-sm">
+                <li>El vocabulario del <strong>baño</strong> y de la <strong>higiene</strong> es crucial para describir la rutina.</li>
+                <li>Los <strong>verbos reflexivos</strong> indican que la acción recae sobre el sujeto (<em>lavarsi, svegliarsi</em>).</li>
+                <li>Para conjugar un verbo reflexivo, se usa la partícula correcta (<strong>mi, ti, si, ci, vi, si</strong>) antes del verbo conjugado.</li>
+                <li>Muchos verbos que describen la rutina diaria y los sentimientos son reflexivos en italiano.</li>
+            </ul>
+        </section>
+
+        <!-- 11. DESAFÍO -->
+        <section class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-100 text-center">
+            <h2 class="text-2xl font-bold text-[#005a2c] border-b-2 border-[#CD212A] pb-2 mb-6 uppercase tracking-wider">11. Desafío de la Clase 🚀</h2>
+            <p class="text-gray-700 mb-6 leading-relaxed max-w-3xl mx-auto">
+                Describe tu rutina matutina en 3 o 4 frases cortas, usando al menos tres verbos reflexivos diferentes. Ejemplo: <em>"Io mi sveglio alle sette. Poi mi faccio la doccia e mi vesto."</em>. Usa el vocabulario y la gramática de la clase de hoy. <em>¡Buona fortuna! <span class="traduccion-pequena">(¡Buena suerte!)</span></em>
+            </p>
+            <div class="text-[#CD212A] font-bold text-3xl mb-2">¡Buon lavoro!</div>
+        </section>
+
+        <!-- GABARITO FINAL -->
+        <section class="bg-gray-800 text-white p-8 rounded-xl shadow-lg border-t-4 border-[#3498db]">
+            <h2 class="text-xl font-bold text-[#3498db] mb-4 uppercase tracking-widest text-center md:text-left">Solucionario / Gabarito</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-gray-300">
+                <div>1. mi</div>
+                <div>2. ci prepariamo</div>
+                <div>3. ti</div>
+                <div>4. Loro si vestono.</div>
+                <div>5. si divertono</div>
+                <div>6. vi</div>
+                <div>7. Lei non si trucca.</div>
+                <div>8. ti senti</div>
+                <div>9. si</div>
+                <div>10. Ci vediamo domani.</div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- BANNER DE COMPRA (BOTTOM) -->
+    <div class="max-w-6xl mx-auto mt-12 mb-6 bg-gradient-to-r from-[#008C45] to-[#005a2c] p-8 rounded-2xl shadow-lg text-center text-white">
+        <h2 class="text-2xl md:text-3xl font-bold mb-4">¿Disfrutaste esta clase de prueba? 🎉</h2>
+        <p class="text-lg mb-8 opacity-90">¡No te detengas aquí! Desbloquea las 50 lecciones, miles de audios y todo el material para alcanzar la fluidez y preparar tu ciudadanía.</p>
+        <a href="https://pay.hotmart.com/H104825113O?checkoutMode=10" target="_blank" class="inline-block bg-[#F4F5F0] text-[#005a2c] px-10 py-4 rounded-full font-extrabold text-lg shadow-xl hover:bg-white transition-all transform hover:-translate-y-1">
+            👉 ¡SÍ, QUIERO MI PASAPORTE ITALIANO!
+        </a>
+    </div>
+
+    <!-- SCRIPT DE AUDIO -->
+    <script>
+        let voices = [];
+        function loadVoices() {
+            voices = speechSynthesis.getVoices();
+        }
+        if (speechSynthesis.onvoiceschanged !== undefined) {
+            speechSynthesis.onvoiceschanged = loadVoices;
+        }
+        loadVoices();
+
+        function playAudio(text) {
+            speechSynthesis.cancel();
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'it-IT';
+            utterance.rate = 0.85;
+
+            const voice =
+                voices.find(v => v.lang === 'it-IT' && !v.localService && /Google|Premium|Enhanced|Siri/i.test(v.name)) ||
+                voices.find(v => v.lang === 'it-IT') ||
+                voices.find(v => v.lang.startsWith('it'));
+
+            if (voice) utterance.voice = voice;
+            speechSynthesis.speak(utterance);
+        }
+    </script>
+</body>
+</html>
